@@ -2,16 +2,30 @@
 <html>
   <head>
     <meta http-equiv="content-security-policy" content="default-src 'self' 'unsafe-inline' https://raw.githubusercontent.com/Bismyth/game-server/main/public/favicon.ico; connect-src 'self' *.base67.com wss:;"/>
-    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./css/messages.css"/>
     <link rel="icon" href="https://raw.githubusercontent.com/Bismyth/game-server/main/public/favicon.ico" />
   </head>
   <body>
     <div id="main-wrapper">
       <div id="session-info"></div>
+      <div id="lobby-list"></div>
+      <div id="selected-lobby"></div>
       <div id="server-messages"></div>
-      <div id="selected-message"></div>
+      <div id="selected-message">
+        <div id="selected-message-type"></div>
+        <pre id="selected-message-data"></pre>
+      </div>
       <div id="client-packet-types"></div>
       <div id="selected-packet-type"></div>
     </div>
+    <script type="module" src="./js/setup.mjs"></script>
+    <script type="module">
+      import { send } from "./js/client.mjs";
+      window.send = send;
+
+      import { o } from "./js/setup.mjs";
+      window.o = o;
+    </script>
   </body>
 </html>

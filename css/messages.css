@@ -1,0 +1,11 @@
+#server-messages .message {
+  background-color: #363636;
+  padding: 5px;
+  padding-top: 0;
+  margin: 5px;
+}
+
+#server-messages .message-type {
+  font-weight: bold;
+  margin-bottom: 5px;
+}

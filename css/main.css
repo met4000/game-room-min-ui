@@ -1,5 +1,6 @@
 body {
   background-color: #1e1e1e;
+  color: white;
 }
 
 #main-wrapper {
@@ -13,13 +14,29 @@ body {
 
 #main-wrapper > div {
   background-color: #2a2a2a;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
+}
+
+#main-wrapper pre {
+  white-space: pre-wrap;
 }
 
 #session-info {
   grid-column: 7/9;
-  grid-row: 1/4;
+  grid-row: 1/3;
   
   /* background-color: green; */
+}
+
+#lobby-list {
+  grid-column: 7/9;
+  grid-row: 3/4;
+}
+
+#selected-lobby {
+  grid-column: 7/9;
+  grid-row: 4/7;
 }
 
 #server-messages {
