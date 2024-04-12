@@ -1,3 +1,8 @@
 #session-info > div {
   margin: 15px 10px;
 }
+
+#user-id-value {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 70%;
+}
