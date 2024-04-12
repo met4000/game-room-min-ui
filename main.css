@@ -1,0 +1,51 @@
+body {
+  background-color: #1e1e1e;
+}
+
+#main-wrapper {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+
+  height: 98vh; /* todo */
+}
+
+#main-wrapper > div {
+  background-color: #2a2a2a;
+}
+
+#session-info {
+  grid-column: 7/9;
+  grid-row: 1/4;
+  
+  /* background-color: green; */
+}
+
+#server-messages {
+  grid-column: 1/4;
+  grid-row: 1/5;
+
+  /* background-color: red; */
+}
+
+#selected-message {
+  grid-column: 1/4;
+  grid-row: 5/7;
+
+  /* background-color: pink; */
+}
+
+#client-packet-types {
+  grid-column: 4/7;
+  grid-row: 1/4;
+
+  /* background-color: aqua; */
+}
+
+#selected-packet-type {
+  grid-column: 4/7;
+  grid-row: 4/7;
+
+  /* background-color: aquamarine; */
+}

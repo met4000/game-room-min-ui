@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="content-security-policy" content="default-src 'self'; connect-src 'self' *.base67.com wss:;"/>
+    <meta http-equiv="content-security-policy" content="default-src 'self' 'unsafe-inline' https://raw.githubusercontent.com/Bismyth/game-server/main/public/favicon.ico; connect-src 'self' *.base67.com wss:;"/>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="icon" href="https://raw.githubusercontent.com/Bismyth/game-server/main/public/favicon.ico" />
   </head>
+  <body>
+    <div id="main-wrapper">
+      <div id="session-info"></div>
+      <div id="server-messages"></div>
+      <div id="selected-message"></div>
+      <div id="client-packet-types"></div>
+      <div id="selected-packet-type"></div>
+    </div>
+  </body>
 </html>
