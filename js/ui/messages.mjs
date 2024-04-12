@@ -4,7 +4,7 @@ const serverMessagesContainer = document.getElementById("server-messages");
 const selectedTypeDisplay = document.getElementById("selected-message-type");
 const selectedDataDisplay = document.getElementById("selected-message-data");
 
-/** @type {{type: string, data: any}[]} */
+/** @type {import("../types.mjs").Message[]} */
 const messages = [];
 /** @type {number} */
 let currentMessageIndex = undefined;
@@ -12,10 +12,9 @@ let currentMessageIndex = undefined;
 export let CURRENT_MESSAGE = undefined;
 
 /**
- * @param {string} rawObj 
+ * @param {import("../types.mjs").Message} obj 
  */
-export function handleMessage(rawObj) {
-  const obj = JSON.parse(rawObj);
+export function handleMessage(obj) {
   const i = messages.push(obj) - 1;
 
   /** @type {HTMLDivElement} */

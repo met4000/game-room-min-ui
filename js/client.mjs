@@ -8,9 +8,7 @@ export let conn;
  */
 export function initConnection(domain, handler, autoSendOnOpen) {
   conn = new WebSocket(`wss://${domain}/ws`);
-  conn.onmessage = ev => {
-    handler(ev.data);
-  };
+  conn.onmessage = ev => handler(ev.data);
 
   if (autoSendOnOpen) conn.onopen = () => conn.send({});
 }

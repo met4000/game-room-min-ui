@@ -3,21 +3,42 @@
   <head>
     <meta http-equiv="content-security-policy" content="default-src 'self' 'unsafe-inline' https://raw.githubusercontent.com/Bismyth/game-server/main/public/favicon.ico; connect-src 'self' *.base67.com wss:;"/>
     <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./css/session.css"/>
     <link rel="stylesheet" href="./css/messages.css"/>
     <link rel="icon" href="https://raw.githubusercontent.com/Bismyth/game-server/main/public/favicon.ico" />
   </head>
   <body>
     <div id="main-wrapper">
-      <div id="session-info"></div>
-      <div id="lobby-list"></div>
-      <div id="selected-lobby"></div>
-      <div id="server-messages"></div>
+      <div id="session-info">
+        <div class="section-title">current session</div>
+        <div id="user-name">
+          Display Name: <span id="user-name-value"></span>
+        </div>
+        <div id="user-id">
+          ID: <span id="user-id-value"></span>
+        </div>
+        <center><button id="new-session-button">new session</button></center>
+      </div>
+      <div id="lobby-list">
+        <div class="section-title">lobby list</div>
+      </div>
+      <div id="selected-lobby">
+        <div class="section-title">selected lobby</div>
+      </div>
+      <div id="server-messages">
+        <div class="section-title">server messages</div>
+      </div>
       <div id="selected-message">
+        <div class="section-title">selected message</div>
         <div id="selected-message-type"></div>
         <pre id="selected-message-data"></pre>
       </div>
-      <div id="client-packet-types"></div>
-      <div id="selected-packet-type"></div>
+      <div id="client-packet-types">
+        <div class="section-title">client packet types</div>
+      </div>
+      <div id="selected-packet-type">
+        <div class="section-title">selected packet type</div>
+      </div>
     </div>
     <script type="module" src="./js/setup.mjs"></script>
     <script type="module">

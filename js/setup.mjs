@@ -1,5 +1,6 @@
 import { initConnection } from "./client.mjs";
 import { CURRENT_MESSAGE, handleMessage } from "./ui/messages.mjs";
+import { handleInitMessage } from "./ui/session.mjs";
 
 // quick reference
 console.log(`quick reference:
@@ -10,10 +11,7 @@ console.log(`quick reference:
 - \`o.MESSAGE\` is the data object of the currently selected server message
 `);
 
-// TODO set domain based on a toggle (dev vs actual)
-// TODO get autoSend from a checkbox
-initConnection("games.base67.com", handleMessage, true);
-
+// export constants for console use
 export const o = new Proxy({
   SELF_USER: undefined,
   SELF_NAME: undefined,
@@ -38,3 +36,24 @@ export const o = new Proxy({
     return Reflect.get(...arguments);
   }
 });
+
+function newSession() {
+  // TODO set domain based on a toggle (dev vs actual)
+  // TODO get autoSend from a checkbox
+  initConnection("games.base67.com", rawObj => {
+    const obj = JSON.parse(rawObj);
+    
+    // general message handling
+    handleMessage(obj);
+
+    // specific message handling
+    switch (obj.type) {
+      case "server_user_init":
+        handleInitMessage(obj);
+        break;
+    }
+  }, true);
+}
+
+// hook up buttons
+document.getElementById("new-session-button").addEventListener("click", () => newSession());
