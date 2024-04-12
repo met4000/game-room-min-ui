@@ -5,6 +5,10 @@
   margin: 5px;
 }
 
+#server-messages .message.selected {
+  background-color: #304060;
+}
+
 #server-messages .message-type {
   font-weight: bold;
   margin-bottom: 5px;

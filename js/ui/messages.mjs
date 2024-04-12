@@ -55,10 +55,15 @@ export function messageClick(e) {
  * @param {number} messageIndex
  */
 function updateCurrentMessage(messageIndex) {
+  const oldMessageWrapper = document.querySelector(`#server-messages .message[${messageIndexAttribute}="${currentMessageIndex}"]`);
+  const newMessageWrapper = document.querySelector(`#server-messages .message[${messageIndexAttribute}="${messageIndex}"]`);
   currentMessageIndex = messageIndex;
 
   const currentMessage = messages[currentMessageIndex]
   CURRENT_MESSAGE = currentMessage.data;
+
+  oldMessageWrapper?.classList?.remove("selected");
+  newMessageWrapper.classList.add("selected");
 
   selectedTypeDisplay.innerHTML = currentMessage.type;
 
