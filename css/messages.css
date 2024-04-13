@@ -1,8 +1,7 @@
 #server-messages .message {
   background-color: #363636;
+  margin: 5px 0;
   padding: 5px;
-  padding-top: 0;
-  margin: 5px;
 }
 
 #server-messages .message.selected {
@@ -11,5 +10,4 @@
 
 #server-messages .message-type {
   font-weight: bold;
-  margin-bottom: 5px;
 }

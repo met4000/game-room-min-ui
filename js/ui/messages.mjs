@@ -1,6 +1,6 @@
 const messageIndexAttribute = "data-message-index";
 
-const serverMessagesContainer = document.getElementById("server-messages");
+const serverMessagesContainer = document.getElementById("server-messages-display");
 const selectedTypeDisplay = document.getElementById("selected-message-type");
 const selectedDataDisplay = document.getElementById("selected-message-data");
 

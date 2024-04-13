@@ -11,33 +11,58 @@
     <div id="main-wrapper">
       <div id="session-info">
         <div class="section-title">current session</div>
-        <div id="user-name">
-          Display Name: <span id="user-name-value"></span>
+        <div class="section-content">
+          <div id="user-name">
+            Display Name: <span id="user-name-value"></span>
+          </div>
+  
+          <div id="user-id">
+            ID: <span id="user-id-value"></span>
+          </div>
+  
+          <center><button id="new-session-button">new session</button></center>
         </div>
-        <div id="user-id">
-          ID: <span id="user-id-value"></span>
-        </div>
-        <center><button id="new-session-button">new session</button></center>
       </div>
+
       <div id="lobby-list">
         <div class="section-title">lobby list</div>
+        <div class="section-content">
+          <div class="dynamic-list">
+            <div id="lobby-list-display"></div>
+          </div>
+        </div>
       </div>
+
       <div id="selected-lobby">
         <div class="section-title">selected lobby</div>
+        <div class="section-content"></div>
       </div>
+
       <div id="server-messages">
         <div class="section-title">server messages</div>
+        <div class="section-content">
+          <div class="dynamic-list">
+            <div id="server-messages-display"></div>
+          </div>
+        </div>
       </div>
+
       <div id="selected-message">
         <div class="section-title">selected message</div>
-        <div id="selected-message-type"></div>
-        <pre id="selected-message-data"></pre>
+        <div class="section-content">
+          <div id="selected-message-type"></div>
+          <pre id="selected-message-data"></pre>
+        </div>
       </div>
+
       <div id="client-packet-types">
         <div class="section-title">client packet types</div>
+        <div class="section-content"></div>
       </div>
+
       <div id="selected-packet-type">
         <div class="section-title">selected packet type</div>
+        <div class="section-content"></div>
       </div>
     </div>
     <script type="module" src="./js/setup.mjs"></script>
