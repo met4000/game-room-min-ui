@@ -1,5 +1,7 @@
-#session-info > div {
-  margin: 15px 10px;
+#session-info > .section-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 #user-id-value {
