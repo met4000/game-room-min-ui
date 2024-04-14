@@ -30,6 +30,11 @@ export function handleLobbyJoinMessage(obj) {
   /** @type {LobbyData} */
   const lobbyData = obj.data;
 
+  if (lobbyData.id === "00000000-0000-0000-0000-000000000000") {
+    // response from leaving a lobby
+    return;
+  }
+
   let i = lobbyIndexMap[lobbyData.id];
   if (i !== undefined) {
     lobbies[i] = lobbyData;
