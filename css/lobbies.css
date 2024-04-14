@@ -1,0 +1,18 @@
+#lobby-list .lobby {
+  background-color: #363636;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+#lobby-list .lobby > .lobby-id {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 70%;
+}
+
+#lobby-list .lobby > .lobby-id::before {
+  content: "ID: ";
+}
+
+#lobby-list .lobby.selected {
+  background-color: #304060;
+}

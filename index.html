@@ -3,8 +3,9 @@
   <head>
     <meta http-equiv="content-security-policy" content="default-src 'self' 'unsafe-inline' https://raw.githubusercontent.com/Bismyth/game-server/main/public/favicon.ico; connect-src 'self' *.base67.com wss:;"/>
     <link rel="stylesheet" href="./css/main.css"/>
-    <link rel="stylesheet" href="./css/session.css"/>
+    <link rel="stylesheet" href="./css/lobbies.css"/>
     <link rel="stylesheet" href="./css/messages.css"/>
+    <link rel="stylesheet" href="./css/session.css"/>
     <link rel="icon" href="https://raw.githubusercontent.com/Bismyth/game-server/main/public/favicon.ico" />
   </head>
   <body>
@@ -35,7 +36,9 @@
 
       <div id="selected-lobby">
         <div class="section-title">selected lobby</div>
-        <div class="section-content"></div>
+        <div class="section-content">
+          <pre id="selected-lobby-display"></pre>
+        </div>
       </div>
 
       <div id="server-messages">

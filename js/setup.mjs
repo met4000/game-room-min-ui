@@ -1,6 +1,9 @@
 import { initConnection } from "./client.mjs";
+import { CURRENT_LOBBY } from "./ui/lobby.mjs";
+import * as lobby from "./ui/lobby.mjs";
 import { CURRENT_MESSAGE, handleMessage } from "./ui/messages.mjs";
-import { SELF_NAME, SELF_USER, handleInitMessage } from "./ui/session.mjs";
+import { SELF_NAME, SELF_USER } from "./ui/session.mjs";
+import * as session from "./ui/session.mjs";
 
 // quick reference
 console.log(`quick reference:
@@ -24,9 +27,11 @@ export const o = new Proxy({
   get(target, prop, receiver) {
     switch (prop) {
       case "TYPE":
-      case "LOBBY":
       case "USER":
         throw new Error("not yet implemented");
+
+      case "LOBBY":
+        return CURRENT_LOBBY;
             
       case "SELF_USER":
         return SELF_USER
@@ -53,7 +58,12 @@ function newSession() {
     // specific message handling
     switch (obj.type) {
       case "server_user_init":
-        handleInitMessage(obj);
+        session.handleInitMessage(obj);
+        lobby.handleInitMessage(obj);
+        break;
+      
+      case "server_lobby_change":
+        lobby.handleLobbyJoinMessage(obj);
         break;
     }
   }, true);
