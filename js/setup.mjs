@@ -5,6 +5,7 @@ import { SELF_NAME, SELF_USER, handleInitMessage } from "./ui/session.mjs";
 // quick reference
 console.log(`quick reference:
 - \`send(type: string, data: object)\` for sending data
+- \`join(obj: url | UUID | string)\` to join a lobby by id (or join link, etc.)
 - \`o.SELF_USER\`/\`o.SELF_NAME\` is the id/name of the current player
 // - \`o.TYPE\` is a string of the currently selected packet type
 // - likewise \`o.LOBBY\` is the lobby id (todo \`o.USER\`?)
